@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal;
+namespace DogSports\OneSignal;
 
 class OneSignalAPI {
 	protected $appId;

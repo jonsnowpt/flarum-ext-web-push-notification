@@ -1,7 +1,7 @@
 import app from 'flarum/app';
 
-import OneSignalSettingsModal from 'zurtr/onesignal/components/OneSignalSettingsModal';
+import OneSignalSettingsModal from 'dogsports/onesignal/components/OneSignalSettingsModal';
 
-app.initializers.add('zurtr-onesignal', () => {
-    app.extensionSettings['zurtr-onesignal']  = () =>  app.modal.show(new OneSignalSettingsModal());
+app.initializers.add('dogsports-onesignal', () => {
+    app.extensionSettings['dogsports-onesignal']  = () =>  app.modal.show(new OneSignalSettingsModal());
 });

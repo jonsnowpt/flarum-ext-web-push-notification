@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal;
+namespace DogSports\OneSignal;
 
 use Flarum\Forum\Controller\WebAppController;
 use Psr\Http\Message\ServerRequestInterface as Request;

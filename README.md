@@ -1,8 +1,8 @@
-# flarum-ext-onesignal
+# flarum-ext-web-push-notification
 
 
 ### To Install 
- - Run this command: `composer require zurtr/flarum-ext-onesignal`
+ - Run this command: `composer require dogsports/flarum-ext-web-push-notification`
 
 ### Event Triggers
 

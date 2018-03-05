@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('zurtr/onesignal/main', ['flarum/extend', 'flarum/app', 'flarum/Model', 'flarum/models/User'], function (_export, _context) {
+System.register('dogsports/onesignal/main', ['flarum/extend', 'flarum/app', 'flarum/Model', 'flarum/models/User'], function (_export, _context) {
     "use strict";
 
     var extend, app, Model, User;
@@ -15,11 +15,11 @@ System.register('zurtr/onesignal/main', ['flarum/extend', 'flarum/app', 'flarum/
             User = _flarumModelsUser.default;
         }],
         execute: function () {
-            app.initializers.add('zurtr-onesignal', function () {
+            app.initializers.add('dogsports-onesignal', function () {
                 User.prototype.one_signal_user_id = Model.attribute('one_signal_user_id');
                 $(document).ready(function () {
-                    var appId = app.forum.attribute('zurtr_onesignal_app_id'),
-                        subDomain = app.forum.attribute('zurtr_onesignal_subdomain'),
+                    var appId = app.forum.attribute('dogsports_onesignal_app_id'),
+                        subDomain = app.forum.attribute('dogsports_onesignal_subdomain'),
                         OneSignal = window.OneSignal || [],
                         initObj = {
                         appId: appId,

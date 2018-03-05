@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal\Listener;
+namespace DogSports\OneSignal\Listener;
 
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;

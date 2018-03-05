@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal\Listener;
+namespace DogSports\OneSignal\Listener;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Flarum\Event\UserWillBeSaved;

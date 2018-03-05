@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal\Listener;
+namespace DogSports\OneSignal\Listener;
 
 use Flarum\Event\ConfigureForumRoutes;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -13,6 +13,6 @@ class AddManifestRoute {
 		] );
 	}
 	public function configureForumRoutes(ConfigureForumRoutes $event) {
-		$event->get ( '/manifest.json', 'zurtr.onesignal', 'Zurtr\OneSignal\OneSignalManifestController' );
+		$event->get ( '/manifest.json', 'dogsports.onesignal', 'DogSports\OneSignal\OneSignalManifestController' );
 	}
 }

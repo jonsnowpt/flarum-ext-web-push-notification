@@ -3,15 +3,15 @@
 /**
  * @author Vivex <contact@viveksoni.net>
  */
-namespace Zurtr\OneSignal;
+namespace DogSports\OneSignal;
 
 use Illuminate\Contracts\Events\Dispatcher;
-use Zurtr\OneSignal\Listener\AddClientAssets;
-use Zurtr\OneSignal\Listener\AddHeadData;
-use Zurtr\OneSignal\Listener\AddManifestRoute;
-use Zurtr\OneSignal\Listener\AddOneSignalAttribute;
-use Zurtr\OneSignal\Listener\SendWebPushNotification;
-use Zurtr\OneSignal\Listener\WhileUserUpdate;
+use DogSports\OneSignal\Listener\AddClientAssets;
+use DogSports\OneSignal\Listener\AddHeadData;
+use DogSports\OneSignal\Listener\AddManifestRoute;
+use DogSports\OneSignal\Listener\AddOneSignalAttribute;
+use DogSports\OneSignal\Listener\SendWebPushNotification;
+use DogSports\OneSignal\Listener\WhileUserUpdate;
 
 return function (Dispatcher $events) {
 	$events->subscribe(AddClientAssets::class);

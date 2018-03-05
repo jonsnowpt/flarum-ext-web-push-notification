@@ -1,6 +1,6 @@
 <?php
 
-namespace Zurtr\OneSignal\Listener;
+namespace DogSports\OneSignal\Listener;
 
 use Flarum\Event\ConfigureWebApp;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -20,13 +20,13 @@ class AddClientAssets {
 			$event->addAssets ( [ 
 					__DIR__ . '/../../js/forum/dist/extension.js' 
 			] );
-			$event->addBootstrapper ( 'zurtr/onesignal/main' );
+			$event->addBootstrapper ( 'dogsports/onesignal/main' );
 		}
 		if ($event->isAdmin ()) {
 			$event->addAssets ( [ 
 					__DIR__ . '/../../js/admin/dist/extension.js' 
 			] );
-			$event->addBootstrapper ( 'zurtr/onesignal/main' );
+			$event->addBootstrapper ( 'dogsports/onesignal/main' );
 		}
 	}
 }
