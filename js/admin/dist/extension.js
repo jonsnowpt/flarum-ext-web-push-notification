@@ -1,27 +1,27 @@
 'use strict';
 
-System.register('dogsports/web/push/components/OneSignalSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
     "use strict";
 
-    var SettingsModal, OneSignalSettingsModal;
+    var SettingsModal, WebPushSettingsModal;
     return {
         setters: [function (_flarumComponentsSettingsModal) {
             SettingsModal = _flarumComponentsSettingsModal.default;
         }],
         execute: function () {
-            OneSignalSettingsModal = function (_SettingsModal) {
-                babelHelpers.inherits(OneSignalSettingsModal, _SettingsModal);
+            WebPushSettingsModal = function (_SettingsModal) {
+                babelHelpers.inherits(WebPushSettingsModal, _SettingsModal);
 
-                function OneSignalSettingsModal() {
-                    babelHelpers.classCallCheck(this, OneSignalSettingsModal);
-                    return babelHelpers.possibleConstructorReturn(this, (OneSignalSettingsModal.__proto__ || Object.getPrototypeOf(OneSignalSettingsModal)).apply(this, arguments));
+                function WebPushSettingsModal() {
+                    babelHelpers.classCallCheck(this, WebPushSettingsModal);
+                    return babelHelpers.possibleConstructorReturn(this, (WebPushSettingsModal.__proto__ || Object.getPrototypeOf(WebPushSettingsModal)).apply(this, arguments));
                 }
 
-                babelHelpers.createClass(OneSignalSettingsModal, [{
+                babelHelpers.createClass(WebPushSettingsModal, [{
                     key: 'className',
                     value: function className() {
                         console.log('ClassNameCalled');
-                        return 'OneSignalSettingsModal Modal--small';
+                        return 'WebPushSettingsModal Modal--small';
                     }
                 }, {
                     key: 'title',
@@ -63,30 +63,30 @@ System.register('dogsports/web/push/components/OneSignalSettingsModal', ['flarum
                         )];
                     }
                 }]);
-                return OneSignalSettingsModal;
+                return WebPushSettingsModal;
             }(SettingsModal);
 
-            _export('default', OneSignalSettingsModal);
+            _export('default', WebPushSettingsModal);
         }
     };
 });;
 'use strict';
 
-System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/components/OneSignalSettingsModal'], function (_export, _context) {
+System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/components/WebPushSettingsModal'], function (_export, _context) {
     "use strict";
 
-    var app, OneSignalSettingsModal;
+    var app, WebPushSettingsModal;
     return {
         setters: [function (_flarumApp) {
             app = _flarumApp.default;
-        }, function (_dogsportsWebPushComponentsOneSignalSettingsModal) {
-            OneSignalSettingsModal = _dogsportsWebPushComponentsOneSignalSettingsModal.default;
+        }, function (_dogsportsWebPushComponentsWebPushSettingsModal) {
+            WebPushSettingsModal = _dogsportsWebPushComponentsWebPushSettingsModal.default;
         }],
         execute: function () {
 
             app.initializers.add('dogsports-web-push', function () {
                 app.extensionSettings['dogsports-web-push'] = function () {
-                    return app.modal.show(new OneSignalSettingsModal());
+                    return app.modal.show(new WebPushSettingsModal());
                 };
             });
         }
