@@ -1,8 +1,5 @@
 <?php
 
-/**
- * @author Vivex <contact@viveksoni.net>
- */
 namespace DogSports\Web\Push;
 
 use Illuminate\Contracts\Events\Dispatcher;
@@ -14,7 +11,7 @@ use DogSports\Web\Push\Listener\SendWebPushNotification;
 use DogSports\Web\Push\Listener\WhileUserUpdate;
 
 return function (Dispatcher $events) {
-	$events->subscribe(AddClientAssets::class);
+    $events->subscribe(AddClientAssets::class);
     $events->subscribe(AddManifestRoute::class);
     $events->subscribe(AddHeadData::class);
     $events->subscribe(AddOneSignalAttribute::class);
