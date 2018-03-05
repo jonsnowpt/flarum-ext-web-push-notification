@@ -1,7 +1,0 @@
-/vendor/
-/js/admin/node_modules/
-.idea/
-composer.lock
-js/admin/node_modules/
-js/forum/node_modules/
-/js/forum/node_modules/
