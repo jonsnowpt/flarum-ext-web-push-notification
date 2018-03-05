@@ -13,6 +13,6 @@ class AddManifestRoute {
 		] );
 	}
 	public function configureForumRoutes(ConfigureForumRoutes $event) {
-		$event->get ( '/manifest.json', 'dogsports.onesignal', 'DogSports\Web\Push\OneSignalManifestController' );
+		$event->get ( '/manifest.json', 'dogsports.web.push', 'DogSports\Web\Push\WebPushManifestController' );
 	}
 }
