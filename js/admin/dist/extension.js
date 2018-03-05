@@ -79,8 +79,8 @@ System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/co
     return {
         setters: [function (_flarumApp) {
             app = _flarumApp.default;
-        }, function (_dogsportsOnesignalComponentsOneSignalSettingsModal) {
-            OneSignalSettingsModal = _dogsportsOnesignalComponentsOneSignalSettingsModal.default;
+        }, function (_dogsportsWebPushComponentsOneSignalSettingsModal) {
+            OneSignalSettingsModal = _dogsportsWebPushComponentsOneSignalSettingsModal.default;
         }],
         execute: function () {
 
