@@ -1,10 +1,10 @@
 <?php
-namespace DogSports\OneSignal\Listener;
+namespace DogSports\Web\Push\Listener;
 
 use Flarum\Event\NotificationWillBeSent;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
-use DogSports\OneSignal\OneSignalAPI;
+use DogSports\Web\Push\OneSignalAPI;
 use Flarum\Foundation\Application;
 
 class SendWebPushNotification

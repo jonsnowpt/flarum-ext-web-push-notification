@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\OneSignal;
+namespace DogSports\Web\Push;
 
 use Flarum\Forum\Controller\WebAppController;
 use Psr\Http\Message\ServerRequestInterface as Request;

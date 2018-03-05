@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\OneSignal\Listener;
+namespace DogSports\Web\Push\Listener;
 
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Event\PrepareApiAttributes;
