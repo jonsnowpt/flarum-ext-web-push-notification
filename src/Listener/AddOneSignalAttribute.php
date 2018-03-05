@@ -19,8 +19,8 @@ class AddOneSignalAttribute {
 		] );
 	}
 	public function addAttributes(PrepareApiAttributes $event) {
-		$event->attributes ['dogsports_onesignal_app_id'] = $this->settings->get ( 'dogsports-onesignal.one_signal_app_id' );
-		$event->attributes ['dogsports_onesignal_subdomain'] = $this->settings->get ( 'dogsports-onesignal.onesignal_subdomain' );
+		$event->attributes ['dogsports_web_push_app_id'] = $this->settings->get ( 'dogsports-web-push.one_signal_app_id' );
+		$event->attributes ['dogsports_web_push_subdomain'] = $this->settings->get ( 'dogsports-web-push.onesignal_subdomain' );
 		if ($event->isSerializer ( UserSerializer::class )) {
 			$event->attributes ['one_signal_user_id'] = $event->model->one_signal_user_id;
 		}

@@ -17,7 +17,7 @@ class SendWebPushNotification
 	{
 		$this->settings = $settings;
 		$this->applicationBaseURL = $application->config('url');
-		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('dogsports-onesignal.one_signal_app_id'), $this->settings->get('dogsports-onesignal.one_signal_api_key'));
+		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('dogsports-web-push.one_signal_app_id'), $this->settings->get('dogsports-web-push.one_signal_api_key'));
 	}
 
 	public function subscribe(Dispatcher $events)

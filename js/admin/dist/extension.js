@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('dogsports/onesignal/components/OneSignalSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('dogsports/web/push/components/OneSignalSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
     "use strict";
 
     var SettingsModal, OneSignalSettingsModal;
@@ -41,7 +41,7 @@ System.register('dogsports/onesignal/components/OneSignalSettingsModal', ['flaru
                                 null,
                                 'OneSignal AppID: '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-onesignal.one_signal_app_id') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.one_signal_app_id') })
                         ), m(
                             'div',
                             { className: 'form-group' },
@@ -50,7 +50,7 @@ System.register('dogsports/onesignal/components/OneSignalSettingsModal', ['flaru
                                 null,
                                 'API Key: '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-onesignal.one_signal_api_key') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.one_signal_api_key') })
                         ), m(
                             'div',
                             { className: 'form-group' },
@@ -59,7 +59,7 @@ System.register('dogsports/onesignal/components/OneSignalSettingsModal', ['flaru
                                 null,
                                 'Subdomain (if not https): '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-onesignal.onesignal_subdomain') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.onesignal_subdomain') })
                         )];
                     }
                 }]);
@@ -72,7 +72,7 @@ System.register('dogsports/onesignal/components/OneSignalSettingsModal', ['flaru
 });;
 'use strict';
 
-System.register('dogsports/onesignal/main', ['flarum/app', 'dogsports/onesignal/components/OneSignalSettingsModal'], function (_export, _context) {
+System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/components/OneSignalSettingsModal'], function (_export, _context) {
     "use strict";
 
     var app, OneSignalSettingsModal;
@@ -84,8 +84,8 @@ System.register('dogsports/onesignal/main', ['flarum/app', 'dogsports/onesignal/
         }],
         execute: function () {
 
-            app.initializers.add('dogsports-onesignal', function () {
-                app.extensionSettings['dogsports-onesignal'] = function () {
+            app.initializers.add('dogsports-web-push', function () {
+                app.extensionSettings['dogsports-web-push'] = function () {
                     return app.modal.show(new OneSignalSettingsModal());
                 };
             });

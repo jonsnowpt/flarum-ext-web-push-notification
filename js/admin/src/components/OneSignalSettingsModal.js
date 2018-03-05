@@ -16,15 +16,15 @@ export default class OneSignalSettingsModal extends SettingsModal {
         return [
             <div className="form-group">
                 <label>OneSignal AppID: </label>
-                <input className="FormControl" bidi={this.setting('dogsports-onesignal.one_signal_app_id')}/>
+                <input className="FormControl" bidi={this.setting('dogsports-web-push.one_signal_app_id')}/>
             </div>,
             <div className="form-group">
                 <label>API Key: </label>
-                <input className="FormControl" bidi={this.setting('dogsports-onesignal.one_signal_api_key')}/>
+                <input className="FormControl" bidi={this.setting('dogsports-web-push.one_signal_api_key')}/>
             </div>,
             <div className="form-group">
                 <label>Subdomain (Leave blank if website is <b>https</b>): </label>
-                <input className="FormControl" bidi={this.setting('dogsports-onesignal.onesignal_subdomain')}/>
+                <input className="FormControl" bidi={this.setting('dogsports-web-push.onesignal_subdomain')}/>
             </div>
     ];
     }

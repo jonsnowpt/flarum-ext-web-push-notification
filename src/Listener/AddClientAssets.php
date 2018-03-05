@@ -20,13 +20,13 @@ class AddClientAssets {
 			$event->addAssets ( [ 
 					__DIR__ . '/../../js/forum/dist/extension.js' 
 			] );
-			$event->addBootstrapper ( 'dogsports/onesignal/main' );
+			$event->addBootstrapper ( 'dogsports/web/push/main' );
 		}
 		if ($event->isAdmin ()) {
 			$event->addAssets ( [ 
 					__DIR__ . '/../../js/admin/dist/extension.js' 
 			] );
-			$event->addBootstrapper ( 'dogsports/onesignal/main' );
+			$event->addBootstrapper ( 'dogsports/web/push/main' );
 		}
 	}
 }
