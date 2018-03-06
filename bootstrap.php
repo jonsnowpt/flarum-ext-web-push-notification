@@ -11,10 +11,10 @@ use DogSports\Web\Push\Listener\SendWebPushNotification;
 use DogSports\Web\Push\Listener\WhileUserUpdate;
 
 return function (Dispatcher $events) {
-    $events->subscribe(AddClientAssets::class);
-    $events->subscribe(AddManifestRoute::class);
-    $events->subscribe(AddHeadData::class);
-    $events->subscribe(AddWebPushAttribute::class);
-    $events->subscribe(WhileUserUpdate::class);
-    $events->subscribe(SendWebPushNotification::class);
+$events->subscribe(AddClientAssets::class);
+$events->subscribe(AddHeadData::class);
+$events->subscribe(AddManifestRoute::class);
+$events->subscribe(AddWebPushAttribute::class);
+$events->subscribe(SendWebPushNotification::class);
+$events->subscribe(WhileUserUpdate::class);
 };
