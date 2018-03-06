@@ -1,5 +1,4 @@
 <?php
-
 namespace DogSports\WebPush\Listener;
 
 use Flarum\Event\ConfigureWebApp;
@@ -11,12 +10,12 @@ class AddClientAssets {
 	}
 	public function addAssets(ConfigureWebApp $event) {
 		if ($event->isForum()) {
-			$event->addAssets(['https://cdn.onesignal.com/sdks/OneSignalSDK.js']);
-			$event->addAssets([__DIR__.'/../../js/forum/dist/extension.js']);
+			$event->addAssets('https://cdn.onesignal.com/sdks/OneSignalSDK.js');
+			$event->addAssets(__DIR__.'/../../js/forum/dist/extension.js');
 			$event->addBootstrapper('dogsports/webpush/main');
 		}
 		if ($event->isAdmin()) {
-			$event->addAssets([__DIR__.'/../../js/admin/dist/extension.js']);
+			$event->addAssets(__DIR__.'/../../js/admin/dist/extension.js');
 			$event->addBootstrapper('dogsports/webpush/main');
 		}
 	}
