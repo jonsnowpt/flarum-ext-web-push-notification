@@ -12,14 +12,11 @@ class AddHeadData {
 		$this->settings = $settings;
 	}
 	public function subscribe(Dispatcher $events) {
-		$events->listen ( ConfigureClientView::class, [ 
-				$this,
-				'getClientView' 
-		] );
+		$events->listen(ConfigureClientView::class, [$this, 'getClientView']);
 	}
 	public function getClientView(ConfigureClientView $event) {
 		if ($event->isForum ()) {
-			$event->view->addHeadString ( '<link rel="manifest" href="/manifest.json">' );
+			$event->view->addHeadString('<link rel="manifest" href="/manifest.json">');
 		}
 	}
 }
