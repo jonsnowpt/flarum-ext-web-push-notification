@@ -12,15 +12,15 @@ class WebPushManifestController extends WebAppController {
 		$this->settings = $settings;
 	}
 	public function render(Request $request) {
-		$appName = $this->settings->get ( 'forum_title' );
+		$appName = $this->settings->get('forum_title');
 		echo <<<END
-            {
-              "name": "$appName",
-              "short_name": "$appName",
-              "start_url": "/",
-              "display": "standalone",
-              "gcm_sender_id": "482941778795"
-            }
-END;
-    }
+		{
+			"name": "$appName",
+			"short_name": "$appName",
+			"start_url": "/",
+			"display": "standalone",
+			"gcm_sender_id": "482941778795"
+		}
+		END;
+	}
 }
