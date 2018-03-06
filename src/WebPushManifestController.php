@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\Web\Push;
+namespace DogSports\WebPush;
 
 use Flarum\Forum\Controller\WebAppController;
 use Psr\Http\Message\ServerRequestInterface as Request;

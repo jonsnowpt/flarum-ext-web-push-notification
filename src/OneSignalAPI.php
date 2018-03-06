@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\Web\Push;
+namespace DogSports\WebPush;
 
 class OneSignalAPI {
 	protected $appId;

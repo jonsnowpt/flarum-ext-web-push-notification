@@ -1,10 +1,10 @@
 <?php
-namespace DogSports\Web\Push\Listener;
+namespace DogSports\WebPush\Listener;
 
 use Flarum\Event\NotificationWillBeSent;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
-use DogSports\Web\Push\OneSignalAPI;
+use DogSports\WebPush\OneSignalAPI;
 use Flarum\Foundation\Application;
 
 class SendWebPushNotification
@@ -17,7 +17,7 @@ class SendWebPushNotification
 	{
 		$this->settings = $settings;
 		$this->applicationBaseURL = $application->config('url');
-		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('dogsports-web-push.one_signal_app_id'), $this->settings->get('dogsports-web-push.one_signal_api_key'));
+		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('dogsports-webpush.onesignal_app_id'), $this->settings->get('dogsports-webpush.onesignal_api_key'));
 	}
 
 	public function subscribe(Dispatcher $events)
@@ -34,7 +34,7 @@ class SendWebPushNotification
 		if($subject == null)
 			return ;
 		$receiverUser = $subject->user;
-		if($receiverUser == null || $receiverUser->one_signal_user_id == null)
+		if($receiverUser == null || $receiverUser->onesignal_user_id == null)
 			return ;
 		$notificationType = $notificationEvent->getType();
 
@@ -75,6 +75,6 @@ class SendWebPushNotification
 			break;
 		}
 
-		$this->oneSignalAPI->pushNotification($message, $receiverUser->one_signal_user_id, $link, $heading);
+		$this->oneSignalAPI->pushNotification($message, $receiverUser->onesignal_user_id, $link, $heading);
 	}
 }

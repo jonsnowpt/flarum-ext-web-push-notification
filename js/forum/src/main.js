@@ -2,11 +2,11 @@ import {extend} from 'flarum/extend';
 import app from 'flarum/app';
 import Model from 'flarum/Model';
 import User from 'flarum/models/User';
-app.initializers.add('dogsports-web-push', () => {
-    User.prototype.one_signal_user_id = Model.attribute('one_signal_user_id');
+app.initializers.add('dogsports-webpush', () => {
+    User.prototype.onesignal_user_id = Model.attribute('onesignal_user_id');
     $(document).ready(function () {
-        var appId = app.forum.attribute('dogsports_web_push_app_id'),
-            subDomain = app.forum.attribute('dogsports_web_push_subdomain'),
+        var appId = app.forum.attribute('dogsports_webpush_app_id'),
+            subDomain = app.forum.attribute('dogsports_webpush_subdomain'),
             OneSignal = window.OneSignal || [],
             initObj = {
                 appId: appId,
@@ -30,7 +30,7 @@ app.initializers.add('dogsports-web-push', () => {
                         // Make a POST call to your server with the user ID
                         console.log('userId', userId);
                         var  user = app.session.user;
-                        user.save({one_signal_user_id: userId});
+                        user.save({onesignal_user_id: userId});
                     });
                 }
             });

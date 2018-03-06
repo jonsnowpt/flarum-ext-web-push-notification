@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\Web\Push\Listener;
+namespace DogSports\WebPush\Listener;
 
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Event\PrepareApiAttributes;
@@ -16,10 +16,10 @@ class AddWebPushAttribute {
 		$events->listen(PrepareApiAttributes::class, [$this, 'addAttributes']);
 	}
 	public function addAttributes(PrepareApiAttributes $event) {
-		$event->attributes['dogsports_web_push_app_id'] = $this->settings->get('dogsports-web-push.one_signal_app_id');
-		$event->attributes['dogsports_web_push_subdomain'] = $this->settings->get('dogsports-web-push.onesignal_subdomain');
+		$event->attributes['dogsports_webpush_app_id'] = $this->settings->get('dogsports-webpush.onesignal_app_id');
+		$event->attributes['dogsports_webpush_subdomain'] = $this->settings->get('dogsports-webpush.onesignal_subdomain');
 		if ($event->isSerializer(UserSerializer::class)) {
-			$event->attributes['one_signal_user_id'] = $event->model->one_signal_user_id;
+			$event->attributes['onesignal_user_id'] = $event->model->onesignal_user_id;
 		}
 	}
 }

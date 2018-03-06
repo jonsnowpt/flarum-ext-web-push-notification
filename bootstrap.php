@@ -1,14 +1,14 @@
 <?php
 
-namespace DogSports\Web\Push;
+namespace DogSports\WebPush;
 
 use Illuminate\Contracts\Events\Dispatcher;
-use DogSports\Web\Push\Listener\AddClientAssets;
-use DogSports\Web\Push\Listener\AddHeadData;
-use DogSports\Web\Push\Listener\AddManifestRoute;
-use DogSports\Web\Push\Listener\AddWebPushAttribute;
-use DogSports\Web\Push\Listener\SendWebPushNotification;
-use DogSports\Web\Push\Listener\WhileUserUpdate;
+use DogSports\WebPush\Listener\AddClientAssets;
+use DogSports\WebPush\Listener\AddHeadData;
+use DogSports\WebPush\Listener\AddManifestRoute;
+use DogSports\WebPush\Listener\AddWebPushAttribute;
+use DogSports\WebPush\Listener\SendWebPushNotification;
+use DogSports\WebPush\Listener\WhileUserUpdate;
 
 return function (Dispatcher $events) {
 	$events->subscribe(AddClientAssets::class);

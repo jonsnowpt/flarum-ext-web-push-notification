@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('dogsports/webpush/components/WebPushSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
     "use strict";
 
     var SettingsModal, WebPushSettingsModal;
@@ -41,7 +41,7 @@ System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/c
                                 null,
                                 'OneSignal AppID: '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.one_signal_app_id') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-webpush.onesignal_app_id') })
                         ), m(
                             'div',
                             { className: 'form-group' },
@@ -50,7 +50,7 @@ System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/c
                                 null,
                                 'API Key: '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.one_signal_api_key') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-webpush.onesignal_api_key') })
                         ), m(
                             'div',
                             { className: 'form-group' },
@@ -59,7 +59,7 @@ System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/c
                                 null,
                                 'Subdomain (if not https): '
                             ),
-                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-web-push.onesignal_subdomain') })
+                            m('input', { className: 'FormControl', bidi: this.setting('dogsports-webpush.onesignal_subdomain') })
                         )];
                     }
                 }]);
@@ -72,7 +72,7 @@ System.register('dogsports/web/push/components/WebPushSettingsModal', ['flarum/c
 });;
 'use strict';
 
-System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/components/WebPushSettingsModal'], function (_export, _context) {
+System.register('dogsports/webpush/main', ['flarum/app', 'dogsports/webpush/components/WebPushSettingsModal'], function (_export, _context) {
     "use strict";
 
     var app, WebPushSettingsModal;
@@ -84,8 +84,8 @@ System.register('dogsports/web/push/main', ['flarum/app', 'dogsports/web/push/co
         }],
         execute: function () {
 
-            app.initializers.add('dogsports-web-push', function () {
-                app.extensionSettings['dogsports-web-push'] = function () {
+            app.initializers.add('dogsports-webpush', function () {
+                app.extensionSettings['dogsports-webpush'] = function () {
                     return app.modal.show(new WebPushSettingsModal());
                 };
             });

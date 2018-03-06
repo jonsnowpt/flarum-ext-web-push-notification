@@ -1,6 +1,6 @@
 <?php
 
-namespace DogSports\Web\Push\Listener;
+namespace DogSports\WebPush\Listener;
 
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;

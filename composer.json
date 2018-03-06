@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DogSports\\Web\\Push\\": "src/"
+            "DogSports\\WebPush\\": "src/"
         }
     },
     "extra": {

@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('dogsports/web/push/main', ['flarum/extend', 'flarum/app', 'flarum/Model', 'flarum/models/User'], function (_export, _context) {
+System.register('dogsports/webpush/main', ['flarum/extend', 'flarum/app', 'flarum/Model', 'flarum/models/User'], function (_export, _context) {
     "use strict";
 
     var extend, app, Model, User;
@@ -15,11 +15,11 @@ System.register('dogsports/web/push/main', ['flarum/extend', 'flarum/app', 'flar
             User = _flarumModelsUser.default;
         }],
         execute: function () {
-            app.initializers.add('dogsports-web-push', function () {
-                User.prototype.one_signal_user_id = Model.attribute('one_signal_user_id');
+            app.initializers.add('dogsports-webpush', function () {
+                User.prototype.onesignal_user_id = Model.attribute('onesignal_user_id');
                 $(document).ready(function () {
-                    var appId = app.forum.attribute('dogsports_web_push_app_id'),
-                        subDomain = app.forum.attribute('dogsports_web_push_subdomain'),
+                    var appId = app.forum.attribute('dogsports_webpush_app_id'),
+                        subDomain = app.forum.attribute('dogsports_webpush_subdomain'),
                         OneSignal = window.OneSignal || [],
                         initObj = {
                         appId: appId,
@@ -42,7 +42,7 @@ System.register('dogsports/web/push/main', ['flarum/extend', 'flarum/app', 'flar
                                     // Make a POST call to your server with the user ID
                                     console.log('userId', userId);
                                     var user = app.session.user;
-                                    user.save({ one_signal_user_id: userId });
+                                    user.save({ onesignal_user_id: userId });
                                 });
                             }
                         });
