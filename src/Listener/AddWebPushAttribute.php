@@ -7,7 +7,7 @@ use Flarum\Event\PrepareApiAttributes;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
 
-class AddOneSignalAttribute {
+class AddWebPushAttribute {
 	protected $settings;
 	public function __construct(SettingsRepositoryInterface $settings) {
 		$this->settings = $settings;
