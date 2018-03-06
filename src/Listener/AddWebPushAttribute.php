@@ -1,9 +1,12 @@
 <?php
+
 namespace DogSports\Web\Push\Listener;
+
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Event\PrepareApiAttributes;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
+
 class AddOneSignalAttribute {
 	protected $settings;
 	public function __construct(SettingsRepositoryInterface $settings) {
