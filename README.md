@@ -2,7 +2,7 @@
 
 
 ### To Install 
- - Run this command: `composer require dogsports/flarum-ext-webpush-notification`
+ - Run this command: `composer require dogsports/flarum-ext-web-push-notification`
 
 ### Event Triggers
 
